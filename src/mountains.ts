@@ -1,4 +1,4 @@
-import Mountain from "./models/mountainInterface";
+import Mountain from "./models/Mountain";
 
 const mountains: Mountain[] = [
   {
@@ -15,7 +15,7 @@ const mountains: Mountain[] = [
   },
 ];
 
-const findNameOfTallestMountain = (array: Mountain[]): Mountain | undefined => {
+const findNameOfTallestMountain = (array: Mountain[]): Mountain | "" => {
   if (array.length) {
     let tallestMountain: Mountain = array[0];
     array.forEach((item) => {
@@ -25,7 +25,7 @@ const findNameOfTallestMountain = (array: Mountain[]): Mountain | undefined => {
     });
     return tallestMountain;
   } else {
-    return undefined;
+    return "";
   }
 };
 
